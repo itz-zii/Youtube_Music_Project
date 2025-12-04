@@ -70,7 +70,7 @@ function Home() {
             </div>
         </div>
 
-        <div class="text-white mt-20 pl-90 pr-40 relative">
+        <div class="text-white mt-20 ml-90 pr-40 relative">
         <div class="flex justify-between">
     <h1 class="text-4xl font-bold mb-5">Đĩa nhạc dành cho bạn</h1>
     <span class="flex justify-between">
@@ -449,6 +449,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const durationTimeElem = document.getElementById("duration-time");
     const seekbarProgress = document.getElementById("seekbar-progress");
     const seekbarThumb = document.getElementById("seekbar-thumb");
+    
 
     let isPlaying = false;
 
@@ -587,6 +588,7 @@ window.playThisTrack = function(track) {
 
     updateFooterTrackInfo(track);
 };
+
 
 
 

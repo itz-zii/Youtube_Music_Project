@@ -41,18 +41,18 @@ class AudioPlayer {
 
     init() {
         this.audio = document.getElementById("audio-player");
-
+        this.audio = document.getElementById("audio-player");
         this.playIcon = document.getElementById("play-icon");
         this.prevBtn = document.querySelector(".prev-track");
         this.nextBtn = document.querySelector(".next-track");
-
+        this.audio.addEventListener("ended", () => this.handleTrackEnd()); 
         this.seekbar = document.getElementById("seekbar");
         this.seekProgress = document.getElementById("seekbar-progress");
         this.seekThumb = document.getElementById("seekbar-thumb");
-
+        this.audio.volume = 0.5;
         this.curTimeText = document.getElementById("current-time");
         this.durTimeText = document.getElementById("duration-time");
-
+        this.volumeSlider.value = 0.5;
         this.volumeSlider = document.getElementById("volume-slider");
 
         this.shuffleBtn = document.getElementById("shuffle-btn");
@@ -115,24 +115,24 @@ this.repeatBtn.addEventListener("click", () => this.toggleRepeat());
 }
 
 handleTrackEnd() {
-    if (this.repeatMode === "one") {
-        this.audio.currentTime = 0;
-        this.audio.play();
-        return;
-    }
+     if (this.repeatMode === "one") {
+            this.audio.currentTime = 0;
+            this.audio.play();
+            return;
+        }
 
-    if (this.isShuffle) {
-        let newIndex;
-        do {
-            newIndex = Math.floor(Math.random() * trackList.length);
-        } while (newIndex === this.currentTrackIndex);
+        if (this.isShuffle) {
+            let newIndex;
+            do {
+                newIndex = Math.floor(Math.random() * trackList.length);
+            } while (newIndex === this.currentTrackIndex);
 
-        this.currentTrackIndex = newIndex;
-        this.playThisTrack(trackList[this.currentTrackIndex]);
-        return;
-    }
+            this.currentTrackIndex = newIndex;
+            this.playThisTrack(trackList[this.currentTrackIndex]);
+            return;
+        }
 
-    this.nextTrack();
+        this.nextTrack(); 
 }
 
 
@@ -155,16 +155,15 @@ handleTrackEnd() {
 
     playThisTrack(track) {
     this.audio.src = track.src;
-    this.audio.play();
+        this.audio.play();
+        this.playIcon.classList.replace("fa-play", "fa-pause");
 
-    const footer = document.querySelector("footer");
-    if (footer && footer.classList.contains("hidden")) {
-        footer.classList.remove("hidden");
-    }
+        const footer = document.querySelector("footer");
+        if (footer && footer.classList.contains("hidden")) {
+            footer.classList.remove("hidden");
+        }
 
-    this.audio.onended = () => this.handleTrackEnd();
-
-    this.playIcon.classList.replace("fa-play", "fa-pause");
+        this.audio.onended = () => this.handleTrackEnd();
     
 }
 
@@ -187,8 +186,8 @@ handleTrackEnd() {
 
 
     prevTrack() {
-        this.currentTrackIndex = (this.currentTrackIndex - 1 + trackList.length) % trackList.length;
-        this.playThisTrack(trackList[this.currentTrackIndex]);
+    this.currentTrackIndex = (this.currentTrackIndex - 1 + trackList.length) % trackList.length;
+    this.playThisTrack(trackList[this.currentTrackIndex]);
     }
 
     startSeek(e) {
@@ -240,5 +239,4 @@ handleTrackEnd() {
     }
     
 }
-
 export default new AudioPlayer()
