@@ -34,13 +34,44 @@ async function Header() {
             <i class="fa-solid fa-ellipsis-vertical dark:text-white text-[18px]"></i>
           </button>
 
+          <!-- 🔥 Nút mở modal -->
           <button class="cursor-pointer dark:bg-white h-8 px-4 rounded-full text-[14px] font-medium">
-            <a id="openModalBtn" href="/SignIn.js">Đăng ký</a>
+            <span id="openModalBtn">Đăng ký</span>
           </button>
         </div>
      </div>
     </div>
+
+    <div id="authModal" class="hidden fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
+      <div class="bg-white w-[400px] rounded-lg p-6 text-black relative">
+
+        <button id="closeModalBtn" class="absolute top-3 right-3 text-xl cursor-pointer">&times;</button>
+
+        <h2 class="text-2xl font-bold mb-4 text-center">Đăng ký</h2>
+
+        <form id="registerForm" class="flex flex-col gap-3">
+          <input class="border p-2 rounded" type="text" placeholder="Tên người dùng" required>
+          <input class="border p-2 rounded" type="email" placeholder="Email" required>
+          <input class="border p-2 rounded" type="password" placeholder="Mật khẩu" required>
+          <button class="bg-black text-white p-2 rounded mt-2">Đăng ký</button>
+        </form>
+
+        <p class="text-center mt-4 text-sm">
+            Đã có tài khoản? 
+            <span id="switchToLogin" class="text-blue-600 cursor-pointer">Đăng nhập</span>
+        </p>
+
+        <form id="loginForm" class="flex flex-col gap-3 mt-6 hidden">
+          <input class="border p-2 rounded" type="email" placeholder="Email" required>
+          <input class="border p-2 rounded" type="password" placeholder="Mật khẩu" required>
+          <button class="bg-black text-white p-2 rounded mt-2">Đăng nhập</button>
+        </form>
+
+      </div>
+    </div>
     `;
 }
+
+
 
 export default Header;

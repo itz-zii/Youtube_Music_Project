@@ -155,17 +155,18 @@ handleTrackEnd() {
 
     playThisTrack(track) {
     this.audio.src = track.src;
-        this.audio.play();
-        this.playIcon.classList.replace("fa-play", "fa-pause");
+    this.audio.play();
 
-        const footer = document.querySelector("footer");
-        if (footer && footer.classList.contains("hidden")) {
-            footer.classList.remove("hidden");
-        }
+    const footer = document.querySelector("footer");
+    if (footer.classList.contains("hidden")) {
+        footer.classList.remove("hidden");
+    }
 
-        this.audio.onended = () => this.handleTrackEnd();
-    
+    this.playIcon.classList.replace("fa-play", "fa-pause");
+
+    this.audio.onended = () => this.handleTrackEnd();
 }
+
 
     playpauseTrack() {
         if (!this.audio.src) return;

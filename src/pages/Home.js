@@ -99,7 +99,7 @@ function Home() {
 
       <div class="text-white my-25 w-full">
             <div class="flex items-center w-full ml-90">
-                <img id="img" draggable="false" class="style-scope yt-img-shadow" alt="" width="789" src="https://www.youtube.com/img/music/tastebuilder/shelf_thumbnail/v6/US_992_X_304.png">
+                <img id="img" draggable="false" class="style-scope yt-img-shadow w-150" alt="" width="789" src="https://www.youtube.com/img/music/tastebuilder/shelf_thumbnail/v6/US_992_X_304.png">
                 <div class="flex flex-col mx-5">
                 <p class="text-white font-bold text-2xl">Hãy cho tôi biết bạn thích nghệ sĩ nào</p>
                 <p class="text-white font-light text-l">Chúng tôi sẽ tạo trải nghiệm dành riêng cho bạn</p>

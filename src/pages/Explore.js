@@ -35,9 +35,9 @@ function Explore() {
 
     return `
         <div class="dark:text-white w-full mt-5 flex ml-[250px]">
-            <h2 class="font-bold text-xl cursor-pointer hover:bg-[#4a4a4a] bg-[#2f2f2f] rounded-lg border-transparent mx-5 p-5 w-110">Bản phát hành mới</h2>
-            <h2 class="font-bold text-xl cursor-pointer hover:bg-[#4a4a4a] bg-[#2f2f2f] rounded-lg border-transparent mx-5 p-5 w-110">Bản phát hành mới</h2>
-            <h2 class="font-bold text-xl cursor-pointer hover:bg-[#4a4a4a] bg-[#2f2f2f] rounded-lg border-transparent mx-5 p-5 w-110">Bản phát hành mới</h2>
+            <h2 class="font-bold text-xl cursor-pointer hover:bg-[#4a4a4a] bg-[#2f2f2f] rounded-lg border-transparent mx-5 p-5 px-20 w-auto">Bản phát hành mới</h2>
+            <h2 class="font-bold text-xl cursor-pointer hover:bg-[#4a4a4a] bg-[#2f2f2f] rounded-lg border-transparent mx-5 p-5 px-20 w-auto">Bản xếp hạng</h2>
+            <h2 class="font-bold text-xl cursor-pointer hover:bg-[#4a4a4a] bg-[#2f2f2f] rounded-lg border-transparent mx-5 p-5 px-20 w-auto">Tâm trạng và thể loại</h2>
         </div>
         
         <div class="ml-[280px] mt-15">

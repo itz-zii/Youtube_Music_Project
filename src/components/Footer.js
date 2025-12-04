@@ -1,6 +1,6 @@
 function Footer() {
     return `
-    <footer class="bg-[#211e1e] bottom-0 left-0 h-13 w-full rounded-b-xl fixed flex flex-col justify-between">
+    <footer class="bg-[#211e1e] z-100 bottom-0 left-0 h-13 w-full rounded-b-xl fixed flex flex-col justify-between">
         <div id="seekbar" class="group relative w-full h-2 bg-[#2f2f2f] rounded-full cursor-pointer">
             <div id="seekbar-progress" class="absolute top-0 left-0 h-full bg-linear-to-r from-red-500 to-pink-500 rounded-full" style="width: 0%;"></div>
             <div id="seekbar-thumb" class="absolute top-1/2 cursor-pointer -translate-y-1/2 -translate-x-1/2 bg-red-500 rounded-full w-3 h-3 opacity-0 scale-0 transition-opacity duration-200 ease-out group-hover:opacity-100 group-hover:scale-100" style="left: -6px;"></div>
