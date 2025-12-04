@@ -66,33 +66,27 @@ this.repeatBtn.addEventListener("click", () => this.toggleRepeat());
 
 
 
-        // Gắn event
         this.prevBtn.addEventListener("click", () => this.prevTrack());
         this.nextBtn.addEventListener("click", () => this.nextTrack());
         this.playIcon.parentElement.addEventListener("click", () => this.playpauseTrack());
 
         this.volumeSlider.addEventListener("input", (e) => this.changeVolume(e));
 
-        // Seekbar: kéo hoặc click
         this.seekThumb.addEventListener("mousedown", (e) => this.startSeek(e));
         this.seekbar.addEventListener("mousedown", (e) => this.startSeek(e));
 
         document.addEventListener("mousemove", (e) => this.moveSeek(e));
         document.addEventListener("mouseup", () => this.endSeek());
 
-        // Khi metadata load
         this.audio.addEventListener("loadedmetadata", () => {
             this.durTimeText.textContent = this.formatTime(this.audio.duration);
         });
 
-        // Khi nhạc chạy
         this.audio.addEventListener("timeupdate", () => this.updateSeekBar());
 
-        // Khởi tạo âm lượng mặc định
         this.audio.volume = 0.5;
         this.volumeSlider.value = 0.5;
         window.addEventListener("keydown", (e) => {
-        // Nếu đang nhập vào input thì không điều khiển nhạc
         if (["INPUT", "TEXTAREA"].includes(document.activeElement.tagName)) return;
 
         if (e.code === "Space") {   
@@ -163,16 +157,13 @@ handleTrackEnd() {
     this.audio.src = track.src;
     this.audio.play();
 
-    // Cập nhật footer (nếu chưa hiện)
     const footer = document.querySelector("footer");
     if (footer && footer.classList.contains("hidden")) {
         footer.classList.remove("hidden");
     }
 
-    // Đảm bảo listener ended được gắn
     this.audio.onended = () => this.handleTrackEnd();
 
-    // Cập nhật icon
     this.playIcon.classList.replace("fa-play", "fa-pause");
     
 }

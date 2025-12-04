@@ -436,7 +436,6 @@ const trackList = [
 ];
 
 window.addEventListener("DOMContentLoaded", () => {
-    // Đảm bảo các phần tử tồn tại
     const playlist = document.getElementById("playlist");
     const leftBtn = document.getElementById("left-btn");
     const rightBtn = document.getElementById("right-btn");
@@ -453,14 +452,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
     let isPlaying = false;
 
-    // Khi người dùng nhấn Play/Pause
     playpauseButton.addEventListener("click", () => {
         if (isPlaying) {
-            // Pause audio
             audio.pause();
             playIcon.classList.replace("fa-pause", "fa-play");
         } else {
-            // Play audio
             audio.play();
             playIcon.classList.replace("fa-play", "fa-pause");
         }
@@ -468,35 +464,29 @@ window.addEventListener("DOMContentLoaded", () => {
         isPlaying = !isPlaying;
     });
 
-    // Cập nhật thời gian khi audio đang phát
     audio.addEventListener("timeupdate", () => {
         const currentTime = audio.currentTime;
         const duration = audio.duration;
         const progress = (currentTime / duration) * 100;
 
-        // Cập nhật thời gian hiện tại và tổng thời gian
         currentTimeElem.textContent = formatTime(currentTime);
         durationTimeElem.textContent = formatTime(duration);
 
-        // Cập nhật thanh tiến độ
         seekbarProgress.style.width = `${progress}%`;
         seekbarThumb.style.left = `${progress}%`;
     });
 
-    // Định dạng thời gian
     function formatTime(seconds) {
         const minutes = Math.floor(seconds / 60);
         const remainingSeconds = Math.floor(seconds % 60);
         return `${minutes}:${remainingSeconds < 10 ? "0" : ""}${remainingSeconds}`;
     }
 
-    // Xử lý thanh điều khiển âm lượng
     const volumeSlider = document.getElementById("volume-slider");
     volumeSlider.addEventListener("input", (e) => {
         audio.volume = e.target.value;
     });
 
-    // Khi người dùng click vào seekbar để chuyển đến thời gian cụ thể
     const seekbar = document.getElementById("seekbar");
     seekbar.addEventListener("click", (e) => {
         const seekbarWidth = seekbar.offsetWidth;
@@ -504,15 +494,13 @@ window.addEventListener("DOMContentLoaded", () => {
         const newTime = (clickPosition / seekbarWidth) * audio.duration;
         audio.currentTime = newTime;
     });
-    const scrollAmount = 250; // Số pixel cuộn mỗi lần
+    const scrollAmount = 250;
 
-    // Kiểm tra nếu các phần tử không có, ngừng thực thi
     if (!playlist || !leftBtn || !rightBtn || !recommendedAlbums || !leftBtnAlbum || !rightBtnAlbum) {
         console.warn("Không tìm thấy một trong các phần tử cần thiết.");
         return;
     }
 
-    // Sự kiện cuộn playlist
     rightBtn.addEventListener("click", () => {
         playlist.scrollBy({ left: scrollAmount, behavior: "smooth" });
     });
@@ -521,7 +509,6 @@ window.addEventListener("DOMContentLoaded", () => {
         playlist.scrollBy({ left: -scrollAmount, behavior: "smooth" });
     });
 
-    // Sự kiện cuộn recommended albums
     rightBtnAlbum.addEventListener("click", () => {
         recommendedAlbums.scrollBy({ left: scrollAmount, behavior: "smooth" });
     });
@@ -530,7 +517,6 @@ window.addEventListener("DOMContentLoaded", () => {
         recommendedAlbums.scrollBy({ left: -scrollAmount, behavior: "smooth" });
     });
 
-    // Render playlist (đảm bảo danh sách playlist được tạo ra đúng cách)
     function renderPlaylist() {
         playlist.style.display = "grid";
         playlist.style.gridAutoFlow = "column";
@@ -564,7 +550,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
     renderPlaylist();
 
-    // Sự kiện phát nhạc khi người dùng nhấn vào một bài hát
     window.playThisTrack = function(track) {
         const audio = document.getElementById("audio-player");
 
@@ -577,7 +562,6 @@ window.addEventListener("DOMContentLoaded", () => {
         updateFooterTrackInfo(track);
     };
 
-    // Đảm bảo rằng sự kiện cuộn album được xử lý
     const albumCards = document.querySelectorAll("#recommended-albums .album-card");
     albumCards.forEach((card, index) => {
         card.addEventListener("click", () => {
