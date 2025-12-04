@@ -10,6 +10,7 @@ import PlaylistTags from "../components/PlaylistTags";
 import authSevice from "../service/authSevice";
 
 
+
 function Home() {
     const PlaylistTagsName = [
         {
@@ -84,8 +85,8 @@ function Home() {
     <div id="recommended-albums" class="flex gap-5 overflow-x-auto scrollbar-x-hide px-5">
         ${trackList.slice(0, 20).map(track => `
         <div class="album-card min-w-[180px] cursor-pointer rounded-xl relative group">
-            <img src="${track.img}" class="w-full h-48 object-cover rounded-xl" />
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition flex items-center justify-center rounded-xl">
+            <img sr../c="${track.img}" ../class="w-full h-48 object-cover rounded-xl" />
+            <div cl../ass="absolute inset-../0 bg-black/0 group-hover:bg-black/50 transition flex items-center justify-center rounded-xl">
                 <i class="fa-solid fa-play text-3xl text-white opacity-0 group-hover:opacity-100 transition"></i>
             </div>
             <div class="mt-2 font-semibold line-clamp-2">${track.name}</div>
@@ -97,8 +98,8 @@ function Home() {
 
       <div class="text-white my-25 w-full">
             <div class="flex items-center w-full ml-90">
-                <img id="img" draggable="false" class="style-scope yt-img-shadow w-150" alt="" width="789" src="https://www.youtube.com/img/music/tastebuilder/shelf_thumbnail/v6/US_992_X_304.png">
-                <div class="flex flex-col mx-5">
+                <img id../="img" d../raggable="false" class="style-scope yt-img-sh../adow w-150" alt="" width="789" src="https://www.youtube.com/img/mu../sic/tastebuilder/shelf_thumbnail/v6/US_992_X_304.png">
+                <div cl../ass="flex f../lex-col mx-../5">
                 <p class="text-white font-bold text-2xl">Hãy cho tôi biết bạn thích nghệ sĩ nào</p>
                 <p class="text-white font-light text-l">Chúng tôi sẽ tạo trải nghiệm dành riêng cho bạn</p>
                 <span class="my-2">
@@ -116,320 +117,320 @@ const trackList = [
     {
         name: "An Thần",
         artist: "Low G, Thắng",
-        img: "../public/images/An Thần.jpeg",
-        src: "../public/music/An Thần.mp3"
+        img: "../../public/images/An Thần.jpeg",
+        src: "../../public/music/An Thần.mp3"
     },
     {
         name: "6262",
         artist: "Low G",
-        img: "../public/images/6262.jpeg",
-        src: "../public/music/6262 (prod. Maiki) _ Low G _ Nhà Hoá Học Đống Đa.mp3"
+        img: "../../public/images/6262.jpeg",
+        src: "../../public/music/6262 (prod. Maiki) _ Low G _ Nhà Hoá Học Đống Đa.mp3"
     },
     {
         name: "Bảo tàng",
         artist: "Low G",
-        img: "../public/images/Bảo tàng.jpeg",
-        src: "../public/music/Bảo Tàng (prod. Maiki) _ Low G _ Nhà Hóa Học Đống Đa.mp3"
+        img: "../../public/images/Bảo tàng.jpeg",
+        src: "../../public/music/Bảo Tàng (prod. Maiki) _ Low G _ Nhà Hóa Học Đống Đa.mp3"
     },
     {
         name: "Pho real",
         artist: "Low G, Anh Phan, bbno$",
-        img: "../public/images/Pho real.jpeg",
-        src: "../public/music/bbno$, Low G & Anh Phan - pho real.mp3"
+        img: "../../public/images/Pho real.jpeg",
+        src: "../../public/music/bbno$, Low G & Anh Phan - pho real.mp3"
     },
     {
         name: "Càng cua",
         artist: "Low G",
-        img: "../public/images/Càng cua.jpeg",
-        src: "../public/music/Càng Cua _ Low G x Last Fire Crew _ Nhà Hóa Học Đống Đa.mp3"
+        img: "../../public/images/Càng cua.jpeg",
+        src: "../../public/music/Càng Cua _ Low G x Last Fire Crew _ Nhà Hóa Học Đống Đa.mp3"
     },
     {
         name: "Cypher Nhà Làm",
         artist: "Low G, ResQ, Chí, Teddie J",
-        img: "../public/images/Cypher nhà làm.jpeg",
-        src: "../public/music/Cypher Nhà Làm.mp3"
+        img: "../../public/images/Cypher nhà làm.jpeg",
+        src: "../../public/music/Cypher Nhà Làm.mp3"
     },
     {
         name: "Giọng Ta",
         artist: "Daisy Le Garçon, Low G, BeepBeepChild",
-        img: "../public/images/Giọng ta.jpeg",
-        src: "../public/music/Daisy Le Garçon - Giọng Ta (ft. Low G, BeepBeepChild) _ Official Music Video.mp3"
+        img: "../../public/images/Giọng ta.jpeg",
+        src: "../../public/music/Daisy Le Garçon - Giọng Ta (ft. Low G, BeepBeepChild) _ Official Music Video.mp3"
     },
     {
         name: "Dáng Xấu",
         artist: "Low G",
-        img: "../public/images/Dáng xấu.jpeg",
-        src: "../public/music/Dáng Xấu _ Low G _ Rap Nhà Làm.mp3"
+        img: "../../public/images/Dáng xấu.jpeg",
+        src: "../../public/music/Dáng Xấu _ Low G _ Rap Nhà Làm.mp3"
     },
     {
         name: "Dáng Xinh",
         artist: "Low G, Trungng",
-        img: "../public/images/Dáng xinh.jpeg",
-        src: "../public/music/Dáng Xinh (prod. Trungng) _ Low G _ Rap Nhà Làm.mp3"
+        img: "../../public/images/Dáng xinh.jpeg",
+        src: "../../public/music/Dáng Xinh (prod. Trungng) _ Low G _ Rap Nhà Làm.mp3"
     },
     {
         name: "Cách Tán Gái 101",
         artist: "Low G",
-        img: "../public/images/Tán gái 505.jpeg",
-        src: "../public/music/Cách Tán Gái 101 (Japan Remix) _ Low G ft. Ska _ Rap Nhà Làm.mp3"
+        img: "../../public/images/Tán gái 505.jpeg",
+        src: "../../public/music/Cách Tán Gái 101 (Japan Remix) _ Low G ft. Ska _ Rap Nhà Làm.mp3"
     },
     {
         name: "Tán Gái 202",
         artist: "Low G",
-        img: "../public/images/Tán gái 505.jpeg",
-        src: "../public/music/Tán Gái 202 _ Low G _ Rap Nhà Làm.mp3"
+        img: "../../public/images/Tán gái 505.jpeg",
+        src: "../../public/music/Tán Gái 202 _ Low G _ Rap Nhà Làm.mp3"
     },
     {
         name: "Tán Gái 303",
         artist: "Low G",
-        img: "../public/images/Tán gái 303.jpeg",
-        src: "../public/music/Tán Gái 303 _ Low G _ Rap Nhà Làm.mp3"
+        img: "../../public/images/Tán gái 303.jpeg",
+        src: "../../public/music/Tán Gái 303 _ Low G _ Rap Nhà Làm.mp3"
     },
     {
         name: "Tán Gái 505",
         artist: "Low G",
-        img: "../public/images/Tán gái 505.jpeg",
-        src: "../public/music/Tán Gái 505 _ Low G _ Rap Nhà Làm.mp3"
+        img: "../../public/images/Tán gái 505.jpeg",
+        src: "../../public/music/Tán Gái 505 _ Low G _ Rap Nhà Làm.mp3"
     },
     {
         name: "Tán Gái 606",
         artist: "Low G",
-        img: "../public/images/Tán gái 606.jpeg",
-        src: "../public/music/Tán Gái 606 _ Low G _ Rap Nhà Làm.mp3"
+        img: "../../public/images/Tán gái 606.jpeg",
+        src: "../../public/music/Tán Gái 606 _ Low G _ Rap Nhà Làm.mp3"
     },
     {
         name: "FASHION Tán Gái",
         artist: "Low G, Wren Evans",
-        img: "../public/images/FASHION Tán Gái.jpeg",
-        src: "../public/music/FASHION TÁN GÁI (BECK STAGE CYPHER 2021) - Wren Evans ft Low G.mp3"
+        img: "../../public/images/FASHION Tán Gái.jpeg",
+        src: "../../public/music/FASHION TÁN GÁI (BECK STAGE CYPHER 2021) - Wren Evans ft Low G.mp3"
     },
     {
         name: "Chán Gái 707",
         artist: "Low G",
-        img: "../public/images/Chán gái 707.jpeg",
-        src: "../public/music/Chán Gái 707 _ Low G _ Rap Nhà Làm.mp3"
+        img: "../../public/images/Chán gái 707.jpeg",
+        src: "../../public/music/Chán Gái 707 _ Low G _ Rap Nhà Làm.mp3"
     },
     {
         name: "Simp Gái 808",
         artist: "Low G",
-        img: "../public/images/Simp Gái 808.jpeg",
-        src: "../public/music/Simp Gái 808 _ Low G _ Rap Nhà Làm.mp3"
+        img: "../../public/images/Simp Gái 808.jpeg",
+        src: "../../public/music/Simp Gái 808 _ Low G _ Rap Nhà Làm.mp3"
     },
     {
         name: "Love Game",
         artist: "Low G, tlinh",
-        img: "../public/images/Love game.jpeg",
-        src: "../public/music/Low G _ Love Game (ft. tlinh) _ OFFICIAL MUSIC VIDEO.mp3"
+        img: "../../public/images/Love game.jpeg",
+        src: "../../public/music/Low G _ Love Game (ft. tlinh) _ OFFICIAL MUSIC VIDEO.mp3"
     },
     {
         name: "DÂU TẰM",
         artist: "Low G, tlinh",
-        img: "../public/images/HOP ON DA SHOW.jpeg",
-        src: "../public/music/DÂU TẰM _ Low G x tlinh _ OFFICIAL AUDIO.mp3"
+        img: "../../public/images/HOP ON DA SHOW.jpeg",
+        src: "../../public/music/DÂU TẰM _ Low G x tlinh _ OFFICIAL AUDIO.mp3"
     },
     {
         name: "HOP ON DA SHOW",
         artist: "Low G, tlinh",
-        img: "../public/images/HOP ON DA SHOW.jpeg",
-        src: "../public/music/HOP ON DA SHOW _ Low G x tlinh x Last Fire Crew _ OFFICIAL MUSIC VIDEO.mp3"
+        img: "../../public/images/HOP ON DA SHOW.jpeg",
+        src: "../../public/music/HOP ON DA SHOW _ Low G x tlinh x Last Fire Crew _ OFFICIAL MUSIC VIDEO.mp3"
     },
     {
         name: "Đơn Giản",
         artist: "Low G",
-        img: "../public/images/Đơn giản.jpeg",
-        src: "../public/music/Đơn Giản _ Low G _ Nhà Hóa Học Đống Đa.mp3"
+        img: "../../public/images/Đơn giản.jpeg",
+        src: "../../public/music/Đơn Giản _ Low G _ Nhà Hóa Học Đống Đa.mp3"
     },
     {
         name: "Flexin  trên Circle K",
         artist: "Low G",
-        img: "../public/images/Flexin  trên Circle K.jpeg",
-        src: "../public/music/Flexin  trên Circle K _ Low G (Lyric video) _ Rap Nhà Làm.mp3"
+        img: "../../public/images/Flexin  trên Circle K.jpeg",
+        src: "../../public/music/Flexin  trên Circle K _ Low G (Lyric video) _ Rap Nhà Làm.mp3"
     },
     {
         name: "Flexin  trên Circle K 2",
         artist: "Low G",
-        img: "../public/images/Flexin trên Circle K 2.jpeg",
-        src: "../public/music/Flexin  Trên Circle K 2 _ Low G _ Rap Nhà Làm.mp3"
+        img: "../../public/images/Flexin trên Circle K 2.jpeg",
+        src: "../../public/music/Flexin  Trên Circle K 2 _ Low G _ Rap Nhà Làm.mp3"
     },
     {
         name: "Không Thèm",
         artist: "Low G",
-        img: "../public/images/Không Thèm.jpeg",
-        src: "../public/music/Không Thèm (prod. Maiki) _ Low G _ Nhà Hóa Học Đống Đa.mp3"
+        img: "../../public/images/Không Thèm.jpeg",
+        src: "../../public/music/Không Thèm (prod. Maiki) _ Low G _ Nhà Hóa Học Đống Đa.mp3"
     },
     {
         name: "Không Thích",
         artist: "Low G",
-        img: "../public/images/Không Thích.jpeg",
-        src: "../public/music/Không Thích _ Low G _ Rap Nhà Làm.mp3"
+        img: "../../public/images/Không Thích.jpeg",
+        src: "../../public/music/Không Thích _ Low G _ Rap Nhà Làm.mp3"
     },
     {
         name: "Không Yêu Em Thì Yêu Ai",
         artist: "Low G, Vũ.",
-        img: "../public/images/Không Yêu Em Thì Yêu Ai.jpeg",
-        src: "../public/music/Không Yêu Em Thì Yêu Ai  _ Vũ. ft. Low G (từ Album  Bảo Tàng Của Nuối Tiếc ).mp3"
+        img: "../../public/images/Không Yêu Em Thì Yêu Ai.jpeg",
+        src: "../../public/music/Không Yêu Em Thì Yêu Ai  _ Vũ. ft. Low G (từ Album  Bảo Tàng Của Nuối Tiếc ).mp3"
     },
     {
         name: "Đừng Để Tiền Rơi",
         artist: "Low G",
-        img: "../public/images/Đừng Để Tiền Rơi.jpeg",
-        src: "../public/music/Low G _ Đừng Để Tiền Rơi _ ‘L2K’ The Album.mp3"
+        img: "../../public/images/Đừng Để Tiền Rơi.jpeg",
+        src: "../../public/music/Low G _ Đừng Để Tiền Rơi _ ‘L2K’ The Album.mp3"
     },
     {
         name: "In Love",
         artist: "Low G, JustaTee",
-        img: "../public/images/Đừng Để Tiền Rơi.jpeg",
-        src: "../public/music/Low G _ In Love (ft. JustaTee) _ ‘L2K’ The Album.mp3"
+        img: "../../public/images/Đừng Để Tiền Rơi.jpeg",
+        src: "../../public/music/Low G _ In Love (ft. JustaTee) _ ‘L2K’ The Album.mp3"
     },
     {
         name: "Long",
         artist: "Low G",
-        img: "../public/images/Đừng Để Tiền Rơi.jpeg",
-        src: "../public/music/Low G _ Long _ ‘L2K’ The Album.mp3"
+        img: "../../public/images/Đừng Để Tiền Rơi.jpeg",
+        src: "../../public/music/Low G _ Long _ ‘L2K’ The Album.mp3"
     },
     {
         name: "Nét",
         artist: "Low G",
-        img: "../public/images/Nét.jpeg",
-        src: "../public/music/Low G _ Nét _ OFFICIAL MUSIC VIDEO.mp3"
+        img: "../../public/images/Nét.jpeg",
+        src: "../../public/music/Low G _ Nét _ OFFICIAL MUSIC VIDEO.mp3"
     },
     {
         name: "Nhiều Hơn",
         artist: "Low G",
-        img: "../public/images/Đừng Để Tiền Rơi.jpeg",
-        src: "../public/music/Low G _ Nhiều Hơn _ ‘L2K’ The Album.mp3"
+        img: "../../public/images/Đừng Để Tiền Rơi.jpeg",
+        src: "../../public/music/Low G _ Nhiều Hơn _ ‘L2K’ The Album.mp3"
     },
     {
         name: "Peace N’ Love",
         artist: "Low G, My Anh",
-        img: "../public/images/Đừng Để Tiền Rơi.jpeg",
-        src: "../public/music/Low G _ Peace N’ Love (ft. Mỹ Anh) _ ‘L2K’ The Album.mp3"
+        img: "../../public/images/Đừng Để Tiền Rơi.jpeg",
+        src: "../../public/music/Low G _ Peace N’ Love (ft. Mỹ Anh) _ ‘L2K’ The Album.mp3"
     },
     {
         name: "Siêu Sao",
         artist: "Low G",
-        img: "../public/images/Đừng Để Tiền Rơi.jpeg",
-        src: "../public/music/Low G _ Siêu Sao _ ‘L2K’ The Album.mp3"
+        img: "../../public/images/Đừng Để Tiền Rơi.jpeg",
+        src: "../../public/music/Low G _ Siêu Sao _ ‘L2K’ The Album.mp3"
     },
     {
         name: "Tràng Thi",
         artist: "Low G",
-        img: "../public/images/Đừng Để Tiền Rơi.jpeg",
-        src: "../public/music/Low G _ Tràng Thi _ ‘L2K’ The Album.mp3"
+        img: "../../public/images/Đừng Để Tiền Rơi.jpeg",
+        src: "../../public/music/Low G _ Tràng Thi _ ‘L2K’ The Album.mp3"
     },
     {
         name: "okeokeoke",
         artist: "Low G",
-        img: "../public/images/okeokeoke.jpeg",
-        src: "../public/music/Okeokeoke.mp3"
+        img: "../../public/images/okeokeoke.jpeg",
+        src: "../../public/music/Okeokeoke.mp3"
     },
     {
         name: "Simple Cypher",
         artist: "Low G",
-        img: "../public/images/Simple Cypher.jpeg",
-        src: "../public/music/Simple Cypher.mp3"
+        img: "../../public/images/Simple Cypher.jpeg",
+        src: "../../public/music/Simple Cypher.mp3"
     },
     {
         name: "Thủ Đô Cypher",
         artist: "Low G, Raptital, RPT Orijinn, RZ Ma$, RPT MCK, RPT Phongkhin",
-        img: "../public/images/Thủ Đô Cypher.jpeg",
-        src: "../public/music/Thủ Đô Cypher - Beck Stage X Biti s Hunter ( RPT Orijinn, LOW G, RZMas, RPT MCK).mp3"
+        img: "../../public/images/Thủ Đô Cypher.jpeg",
+        src: "../../public/music/Thủ Đô Cypher - Beck Stage X Biti s Hunter ( RPT Orijinn, LOW G, RZMas, RPT MCK).mp3"
     },
     {
         name: "Thiên Thần Ác Quỷ",
         artist: "Low G",
-        img: "../public/images/Thiên Thần Ác Quỷ.jpeg",
-        src: "../public/music/Low G - Thiên Thần Ác Quỷ _ A COLORS SHOW.mp3"
+        img: "../../public/images/Thiên Thần Ác Quỷ.jpeg",
+        src: "../../public/music/Low G - Thiên Thần Ác Quỷ _ A COLORS SHOW.mp3"
     },
     {
         name: "Có em",
         artist: "Low G, Madihu",
-        img: "../public/images/Có em.jpeg",
-        src: "../public/music/Madihu - Có em (Feat. Low G) [Official MV].mp3"
+        img: "../../public/images/Có em.jpeg",
+        src: "../../public/music/Madihu - Có em (Feat. Low G) [Official MV].mp3"
     },
     {
         name: "Có Khi",
         artist: "Low G, Madihu",
-        img: "../public/images/Có Khi.jpeg",
-        src: "../public/music/Madihu - Có Khi (Feat. Low G) _ Official MV.mp3"
+        img: "../../public/images/Có Khi.jpeg",
+        src: "../../public/music/Madihu - Có Khi (Feat. Low G) _ Official MV.mp3"
     },
     {
         name: "MUỘN PHIỀN",
         artist: "Phương Ly, Low G, VSTRA",
-        img: "../public/images/MUỘN PHIỀN.jpeg",
-        src: "../public/music/MUỘN PHIỀN – PHƯƠNG LY ft. LOW G _ OFFICIAL MV.mp3"
+        img: "../../public/images/MUỘN PHIỀN.jpeg",
+        src: "../../public/music/MUỘN PHIỀN – PHƯƠNG LY ft. LOW G _ OFFICIAL MV.mp3"
     },
     {
         name: "NGÂN",
         artist: "tlinh, Low G",
-        img: "../public/images/HOP ON DA SHOW.jpeg",
-        src: "../public/music/NGÂN _ Low G x tlinh _ OFFICIAL AUDIO.mp3"
+        img: "../../public/images/HOP ON DA SHOW.jpeg",
+        src: "../../public/music/NGÂN _ Low G x tlinh _ OFFICIAL AUDIO.mp3"
     },
     {
         name: "Ôi Bạn Ơi",
         artist: "Low G, Teddie J",
-        img: "../public/images/Ôi Bạn Ơi.jpeg",
-        src: "../public/music/Ôi Bạn Ơi (Prod. Maiki) _ Low G ft. Teddie J _ Rap Nhà Làm.mp3"
+        img: "../../public/images/Ôi Bạn Ơi.jpeg",
+        src: "../../public/music/Ôi Bạn Ơi (Prod. Maiki) _ Low G ft. Teddie J _ Rap Nhà Làm.mp3"
     },
     {
         name: "Phân Thân",
         artist: "Low G",
-        img: "../public/images/Phân Thân.jpeg",
-        src: "../public/music/Phân Thân (prod. Maiki) _ Low G x DCGR _ Nhà Hóa Học Đống Đa.mp3"
+        img: "../../public/images/Phân Thân.jpeg",
+        src: "../../public/music/Phân Thân (prod. Maiki) _ Low G x DCGR _ Nhà Hóa Học Đống Đa.mp3"
     },
     {
         name: "PHONG LONG",
         artist: "Low G, Obito, WOKEUP",
-        img: "../public/images/PHONG LONG.jpeg",
-        src: "../public/music/PHONG LONG 👬 Low G x Obito x WOKEUP _ WCAs 2023.mp3"
+        img: "../../public/images/PHONG LONG.jpeg",
+        src: "../../public/music/PHONG LONG 👬 Low G x Obito x WOKEUP _ WCAs 2023.mp3"
     },
     {
         name: "PHÓNG ZÌN ZÌN",
         artist: "tlinh, Low G",
-        img: "../public/images/HOP ON DA SHOW.jpeg",
-        src: "../public/music/PHÓNG ZÌN ZÌN _ Low G x tlinh _ OFFICIAL AUDIO.mp3"
+        img: "../../public/images/HOP ON DA SHOW.jpeg",
+        src: "../../public/music/PHÓNG ZÌN ZÌN _ Low G x tlinh _ OFFICIAL AUDIO.mp3"
     },
     {
         name: "Quá Sớm",
         artist: "Low G",
-        img: "../public/images/Quá Sớm.jpeg",
-        src: "../public/music/Quá Sớm _ Low G _ Rap Nhà Làm.mp3"
+        img: "../../public/images/Quá Sớm.jpeg",
+        src: "../../public/music/Quá Sớm _ Low G _ Rap Nhà Làm.mp3"
     },
     {
         name: "Tam Giác",
         artist: "Anh Phan, Low G, Larria",
-        img: "../public/images/Tam Giác.jpeg",
-        src: "../public/music/Tam Giác - Anh Phan ft. Low G & Larria. (M_V).mp3"
+        img: "../../public/images/Tam Giác.jpeg",
+        src: "../../public/music/Tam Giác - Anh Phan ft. Low G & Larria. (M_V).mp3"
     },
     {
         name: "Thơ",
         artist: "Low G",
-        img: "../public/images/Thơ.jpeg",
-        src: "../public/music/Thơ _ @chí-c8chai  ft. Low G _ Rap Nhà Làm.mp3"
+        img: "../../public/images/Thơ.jpeg",
+        src: "../../public/music/Thơ _ @chí-c8chai  ft. Low G _ Rap Nhà Làm.mp3"
     },
     {
         name: "Tiếp Đất",
         artist: "Low G, Thắng, Vantacrow",
-        img: "../public/images/Tiếp Đất.jpeg",
-        src: "../public/music/Tiếp Đất (prod. Vantacrow) _ Low G ft. Thắng _ Rap Nhà Làm.mp3"
+        img: "../../public/images/Tiếp Đất.jpeg",
+        src: "../../public/music/Tiếp Đất (prod. Vantacrow) _ Low G ft. Thắng _ Rap Nhà Làm.mp3"
     },
     {
         name: "NGƯỜI ĐI BAO",
         artist: "tlinh, Low G",
-        img: "../public/images/NGƯỜI ĐI BAO.jpeg",
-        src: "../public/music/tlinh - NGƯỜI ĐI BAO (ft. Low G ) _ OFFICIAL MUSIC VIDEO.mp3"
+        img: "../../public/images/NGƯỜI ĐI BAO.jpeg",
+        src: "../../public/music/tlinh - NGƯỜI ĐI BAO (ft. Low G ) _ OFFICIAL MUSIC VIDEO.mp3"
     },
     {
         name: "vứt zác (vào trong thùng)",
         artist: "tlinh, Low G",
-        img: "../public/images/vứt zác.jpeg",
-        src: "../public/music/vứt zác (vào trong thùng) - tlinh ft. Low G.mp3"
+        img: "../../public/images/vứt zác.jpeg",
+        src: "../../public/music/vứt zác (vào trong thùng) - tlinh ft. Low G.mp3"
     },
     {
         name: "CÓ CHUYỆN, CÙNG CHILL",
         artist: "Low G, Wowy, NÂN",
-        img: "../public/images/CÓ CHUYỆN, CÙNG CHILL.jpeg",
-        src: "../public/music/WOWY x LOW G x NÂN x MASEW _ CÓ CHUYỆN, CÙNG CHILL (#CCCC) x BECK S ICE _ OFFICIAL MV.mp3"
+        img: "../../public/images/CÓ CHUYỆN, CÙNG CHILL.jpeg",
+        src: "../../public/music/WOWY x LOW G x NÂN x MASEW _ CÓ CHUYỆN, CÙNG CHILL (#CCCC) x BECK S ICE _ OFFICIAL MV.mp3"
     }
 ];
 
@@ -551,8 +552,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
             item.innerHTML = `
                 <div class="play-btn relative group flex items-center">
-                    <img src="${track.img}" class="w-15 flex justify-center items-center h-15 rounded-lg object-cover" />
-                    <div class="items-center ml-2">
+                    <img sr../c="${track.img}" ../class="w-15 flex justify-center items-center h-15 rounded-lg object-cover" />
+                    <div cl../ass="items-center ml../-2">
                         <div class="mt-2 font-semibold line-clamp-2">${track.name}</div>
                         <div class="text-sm text-gray-400 line-clamp-1">${track.artist}</div>
                     </div>
