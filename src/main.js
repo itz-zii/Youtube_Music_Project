@@ -14,6 +14,12 @@ const render = async () => {
     document.querySelector("#app").innerHTML = await app();
 };
 
+
+const test = async () => {
+
 await render();
 
 await initRouter();
+}
+
+test()
