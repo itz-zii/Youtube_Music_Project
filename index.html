@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" href="https://music.youtube.com/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <title>Youtube Music Project</title>
+        <style>
+            .scrollbar-x-hide::-webkit-scrollbar {
+                display: none;
+            }
+            .scrollbar-x-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+            }
+            #footer {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#footer.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+        </style>
+    </head>
+    <body class="dark:bg-[#020202] overflow-x-hidden">
+        <div id="app"></div>
+        <script type="module" src="/src/main.js"></script>
+    </body>
+</html>
