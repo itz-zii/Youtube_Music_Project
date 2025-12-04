@@ -85,8 +85,8 @@ function Home() {
     <div id="recommended-albums" class="flex gap-5 overflow-x-auto scrollbar-x-hide px-5">
         ${trackList.slice(0, 20).map(track => `
         <div class="album-card min-w-[180px] cursor-pointer rounded-xl relative group">
-            <img sr../c="${track.img}" ../class="w-full h-48 object-cover rounded-xl" />
-            <div cl../ass="absolute inset-../0 bg-black/0 group-hover:bg-black/50 transition flex items-center justify-center rounded-xl">
+            <img src="${track.img}" class="w-full h-48 object-cover rounded-xl" />
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition flex items-center justify-center rounded-xl">
                 <i class="fa-solid fa-play text-3xl text-white opacity-0 group-hover:opacity-100 transition"></i>
             </div>
             <div class="mt-2 font-semibold line-clamp-2">${track.name}</div>
@@ -98,8 +98,8 @@ function Home() {
 
       <div class="text-white my-25 w-full">
             <div class="flex items-center w-full ml-90">
-                <img id../="img" d../raggable="false" class="style-scope yt-img-sh../adow w-150" alt="" width="789" src="https://www.youtube.com/img/mu../sic/tastebuilder/shelf_thumbnail/v6/US_992_X_304.png">
-                <div cl../ass="flex f../lex-col mx-../5">
+                <img id="img" draggable="false" class="style-scope yt-img-shadow w-150" alt="" width="789" src="https://www.youtube.com/img/music/tastebuilder/shelf_thumbnail/v6/US_992_X_304.png">
+                <div class="flex flex-col mx-5">
                 <p class="text-white font-bold text-2xl">Hãy cho tôi biết bạn thích nghệ sĩ nào</p>
                 <p class="text-white font-light text-l">Chúng tôi sẽ tạo trải nghiệm dành riêng cho bạn</p>
                 <span class="my-2">
@@ -552,8 +552,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
             item.innerHTML = `
                 <div class="play-btn relative group flex items-center">
-                    <img sr../c="${track.img}" ../class="w-15 flex justify-center items-center h-15 rounded-lg object-cover" />
-                    <div cl../ass="items-center ml../-2">
+                    <img src="${track.img}" class="w-15 flex justify-center items-center h-15 rounded-lg object-cover" />
+                    <div class="items-center ml-2">
                         <div class="mt-2 font-semibold line-clamp-2">${track.name}</div>
                         <div class="text-sm text-gray-400 line-clamp-1">${track.artist}</div>
                     </div>
