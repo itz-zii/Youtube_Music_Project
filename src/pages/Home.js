@@ -10,8 +10,6 @@ import PlaylistTags from "../components/PlaylistTags";
 import authSevice from "../service/authSevice";
 
 
-
-
 function Home() {
     const PlaylistTagsName = [
         {
@@ -449,7 +447,25 @@ window.addEventListener("DOMContentLoaded", () => {
     const durationTimeElem = document.getElementById("duration-time");
     const seekbarProgress = document.getElementById("seekbar-progress");
     const seekbarThumb = document.getElementById("seekbar-thumb");
-    
+    document.addEventListener("keydown", (e) => {
+    const active = document.activeElement;
+    if (active.tagName === "INPUT" || active.tagName === "TEXTAREA") return;
+
+    if (e.code === "Space") {
+        e.preventDefault();
+
+        if (audio.paused) {
+            audio.play();
+            playIcon.classList.replace("fa-play", "fa-pause");
+            isPlaying = true;
+        } else {
+            audio.pause();
+            playIcon.classList.replace("fa-pause", "fa-play");
+            isPlaying = false;
+        }
+    }
+});
+
 
     let isPlaying = false;
 
@@ -531,11 +547,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
         trackList.forEach(track => {
             const item = document.createElement("div");
-            item.className = "min-w-[150px] h-20 w-70 rounded-xl px-5 cursor-pointer hover:bg-[#111114]";
+            item.className = "min-w-[150px] h-20 w-70 rounded-xl px-5 pt-3 cursor-pointer hover:bg-[#111114]";
 
             item.innerHTML = `
-                <div class="play-btn relative group p-2 flex items-center">
-                    <img src="${track.img}" class="w-10 h-10 rounded-lg object-cover" />
+                <div class="play-btn relative group flex items-center">
+                    <img src="${track.img}" class="w-15 flex justify-center items-center h-15 rounded-lg object-cover" />
                     <div class="items-center ml-2">
                         <div class="mt-2 font-semibold line-clamp-2">${track.name}</div>
                         <div class="text-sm text-gray-400 line-clamp-1">${track.artist}</div>

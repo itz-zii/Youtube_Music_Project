@@ -158,15 +158,15 @@ handleTrackEnd() {
     this.audio.play();
 
     const footer = document.querySelector("footer");
-    if (footer.classList.contains("hidden")) {
+    if (footer && footer.classList.contains("hidden")) {
         footer.classList.remove("hidden");
     }
 
-    this.playIcon.classList.replace("fa-play", "fa-pause");
-
     this.audio.onended = () => this.handleTrackEnd();
-}
 
+    this.playIcon.classList.replace("fa-play", "fa-pause");
+    
+}
 
     playpauseTrack() {
         if (!this.audio.src) return;
@@ -188,7 +188,7 @@ handleTrackEnd() {
 
     prevTrack() {
     this.currentTrackIndex = (this.currentTrackIndex - 1 + trackList.length) % trackList.length;
-    this.playThisTrack(trackList[this.currentTrackIndex]);
+        this.playThisTrack(trackList[this.currentTrackIndex]);
     }
 
     startSeek(e) {
@@ -240,4 +240,5 @@ handleTrackEnd() {
     }
     
 }
+
 export default new AudioPlayer()
